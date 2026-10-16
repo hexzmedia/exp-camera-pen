@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The camera as a pen</title>
+    <style>
+      :root {
+        --black: #1b1819;
+        --deep: #0f0d0e;
+        --panel: #bdcacf;
+        --panel-2: #9fb0b7;
+        --ink: #1b1819;
+        --purple: #925ba4;
+        --green: #31b578;
+        --cyan: #60c5c8;
+        --orange: #f37641;
+        --yellow: #f7ef1e;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        background: var(--black);
+      }
+      body {
+        margin: 0;
+        color: #fff;
+        font: 17px/1.55 Arial, Helvetica, sans-serif;
+      }
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      h1 {
+        margin: 8px 0 4px;
+        font-size: 32px;
+        line-height: 1.1;
+      }
+      .lead {
+        margin: 0 0 16px;
+        color: var(--panel);
+      }
+      .lead a {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>The camera as a pen</h1>
+      <p class="lead">The middle of everything that moves draws a line. The picture stays on your own device. The article that goes with it: <a href="https://hexz.net/zien/">De camera als pen</a> on hexz.net (in Dutch).</p>
+      <div class="demo">
+        <link rel="stylesheet" href="demo/see.css" />
+        <section class="see" id="see-demo" aria-label="De camera in vier standen: wat jij ziet, wat de computer ziet, wat beweegt, en de pen">
+          <div class="see-modes" role="group" aria-label="Kies wat je ziet"></div>
+          <div class="see-stage">
+            <canvas class="see-canvas" width="640" height="480" aria-label="Het beeld"></canvas>
+            <div class="see-start">
+              <p class="see-promise">Het beeld blijft op je eigen apparaat. Er wordt niets verstuurd en niets bewaard.</p>
+              <div class="see-choice">
+                <button type="button" data-action="camera">zet de camera aan</button>
+                <button type="button" data-action="sample">liever zonder camera</button>
+              </div>
+              <p class="see-message" data-stat="message"></p>
+            </div>
+          </div>
+          <div class="see-bar">
+            <dl class="see-stats">
+              <div><dt>de computer kijkt naar</dt><dd data-stat="points">19.200 punten</dd></div>
+              <div><dt>daarvan bewegen er</dt><dd data-stat="moving">…</dd></div>
+              <div><dt>beelden per seconde</dt><dd data-stat="fps">…</dd></div>
+              <div><dt>rekentijd per beeld</dt><dd data-stat="cost">…</dd></div>
+            </dl>
+          </div>
+          <div class="see-controls">
+            <label class="see-slider">
+              <span>gevoeligheid <b data-stat="threshold"></b></span>
+              <input type="range" data-control="threshold" min="8" max="80" step="2" value="28" />
+            </label>
+            <label class="see-slider">
+              <span>vertraging van de pen <b data-stat="delay"></b></span>
+              <input type="range" data-control="delay" min="0" max="500" step="50" value="0" />
+            </label>
+            <div class="see-actions">
+              <button type="button" data-action="clear">wis de lijn</button>
+              <button type="button" data-action="stop">stop</button>
+            </div>
+          </div>
+          <p class="see-note" data-stat="note"></p>
+          <noscript><p class="see-note">Dit voorbeeld heeft JavaScript nodig.</p></noscript>
+        </section>
+        <script type="module" src="demo/see.js"></script>
+      </div>
+    </main>
+  </body>
+</html>
