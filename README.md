@@ -2,7 +2,7 @@
 
 What does a computer see when it looks at you? Less than you think, and still enough to draw with.
 
-This is the code behind the article [De camera als pen](https://hexz.net/zien/) on hexz.net (in Dutch). There you can try it, with your camera or with a drawn hand.
+This is the code behind the article [De camera als pen](https://www.hexz.net/zien/?utm_source=github&utm_medium=readme&utm_campaign=zien) on hexz.net (in Dutch). There you can try it, with your camera or with a drawn hand.
 
 ## The question
 
@@ -82,7 +82,7 @@ const x = sumX / n / PW;
 const y = sumY / n / PH;
 ```
 
-The line itself is the same as in [One scribble, ten languages](https://hexz.net/krabbel/): a row of a hundred points, where the newest point replaces the oldest.
+The line itself is the same as in [One scribble, ten languages](https://www.hexz.net/krabbel/?utm_source=github&utm_medium=readme&utm_campaign=zien): a row of a hundred points, where the newest point replaces the oldest.
 
 ## The picture stays with you
 
